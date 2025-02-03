@@ -1,4 +1,3 @@
-version: "3.7"
 services:
   postgres:
     image: postgres:13-alpine
@@ -26,9 +25,9 @@ services:
         max-size: 10m
         max-file: "3"
     volumes:
-      - "${PWD}/dags:/usr/local/airflow/dags"
+      - "${PWD}/../dags:/usr/local/airflow/dags"
       - "${PWD}/plugins:/usr/local/airflow/plugins"
-      - "${PWD}/requirements:/usr/local/airflow/requirements"
+      - "${PWD}/../requirements:/usr/local/airflow/requirements"
       - "${PWD}/startup_script:/usr/local/airflow/startup"
     ports:
       - "8080:8080"
