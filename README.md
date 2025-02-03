@@ -64,7 +64,15 @@ git clone https://github.com/aws/aws-mwaa-local-runner.git
 cd aws-mwaa-local-runner
 ```
 
-### Step one: Building the Docker image
+### Step one: Add AWS credentials to local runner
+
+Open `docker/config/.env.localrunner`
+
+Uncomment lines 3-5, get credentials for `ohme-data-dev` and insert
+
+There may be a more efficient approach - if so, please pick up DE-509 - https://ohmenergy.atlassian.net/browse/DE-509
+
+### Step two: Building the Docker image
 
 Build the Docker container image using the following command:
 
